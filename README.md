@@ -13,6 +13,7 @@
   - 실행 : `$ yarn start`
 
 ### 03. 리액트 컴포넌트 만들기
+
   \*\* Hello.js \*\* 
 
   ```javascript
@@ -32,3 +33,34 @@
   ### ReactDOM.render(<App />, document.getElementById('root'));
   - ReactDOM.render의 역할은 실제 DOM내부에 리액트 컴포넌트를 `id`가 `root`인 DOM을 선택하여 렌더링 하겠다는 의미(index.html) 
   - `<div id="root"><div>` 
+  
+### 04. JSX의 기본규칙 알아보기
+
+  1. 태그는 꼭 닫혀있어야 하며, 태그와 태그사이에 내용이 들어가지 않을때에는 Self Closing 사용. 
+  2. Fragment(<></>) : 두개의 태그는 하나의 태그로 감싸져 있어야 한다. 
+    ```javascript 
+    	<>  // <div>로감 싸는 것보다 Fragment 사용 권장 <></>
+        <Hello />
+        <Hello />
+        <div>안녕히계세요</div>
+      </>
+    ```
+
+  3. 괄호는 가독성을 위한것 이므로 필수적인 것은 아니다.
+  4. Javascript 값을 보여줄때는 {name}중괄호 사용 
+    ```javascript
+    const name = '고한샘';
+    <div>{name}</div> // 고한샘
+    ```
+
+  5. {/* 주석은 이렇게 사용 한다 */}
+  6. Style : 객체 형태로 작성을 해야 하며, `backgroundColor`처럼 camelCase로 네이밍 해야한다.
+    ```javascript
+    	const style = {
+        backgroundColor: 'black',
+        color: 'aqua',
+        fontSize: 24, //기본단위 24px
+        padding: '1rem' 
+    	};
+    ```
+  7. class : `className = `으로 설정 해주어야 한다.
