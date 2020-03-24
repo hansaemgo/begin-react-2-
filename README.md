@@ -6,11 +6,15 @@
   
     ![Virtual DOM을 사용한 구현](../begin-react/src/image/virrualDom.png)
 
+
+
 ### 02. 작업환경 준비
 
   - 설치프로그램 : Node.js / yarn / 코드에디터(VSCode) 
   - 새 프로젝트 만들기 : `$ npx create-react-app begin-react`
   - 실행 : `$ yarn start`
+
+
 
 ### 03. 리액트 컴포넌트 만들기
 
@@ -33,6 +37,8 @@
   ### ReactDOM.render(<App />, document.getElementById('root'));
   - ReactDOM.render의 역할은 실제 DOM내부에 리액트 컴포넌트를 `id`가 `root`인 DOM을 선택하여 렌더링 하겠다는 의미(index.html) 
   - `<div id="root"><div>` 
+  
+
   
 ### 04. JSX의 기본규칙 알아보기
 
@@ -64,3 +70,9 @@
       };
   ```
   7. class : `className = `으로 설정 해주어야 한다.
+
+
+  
+### 05. props를 통해 컴포넌트에게 값 전달하기
+
+  - props : properties의 줄임말. 특정 값을 전달해주고 싶을 때, props 사용
